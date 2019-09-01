@@ -22,6 +22,8 @@ app.post("/save/formdata", function(req, res) {
   res.status(200).send("Data Saved Sucessfully!");
 });
 
-app.listen(8080, function() {
+const port = parseInt(process.env.PORT, 10) || 3000;
+
+app.listen(port, function() {
   console.log("CORS-enabled web server listening on port 8080");
 });
